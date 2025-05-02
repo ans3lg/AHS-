@@ -1,0 +1,48 @@
+.artist_add_painting {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.artist_h {
+    text-align: center;
+}
+
+.artist_add_painting form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    background-color: #333;
+    color: #fff;
+}
+
+.artist_form_group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.artist_form_group input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+}
+
+.artist_button {
+    background-color: #5e5e5e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    /* margin: 5px; */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    max-width: 520px;
+}
+
+.artist_button:hover {
+    background-color: #777;
+}

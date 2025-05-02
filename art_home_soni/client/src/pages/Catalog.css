@@ -1,0 +1,134 @@
+.catalog-page {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  align-items: flex-start
+}
+
+.filters {
+  width: 250px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.filters input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/*  */
+
+.catalogP {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-card .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-card h4 {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.product-card .description {
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0;
+  flex-grow: 1; /* Описание занимает оставшееся пространство */
+  overflow: hidden; /* Обрезаем текст, если он слишком длинный */
+  text-overflow: ellipsis; /* Добавляем многоточие, если текст обрезан */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Ограничиваем количество строк */
+  -webkit-box-orient: vertical;
+}
+
+.product-link{
+  text-decoration: none;
+  color: #333;
+}
+
+.CatalogPage h1{
+  text-align: center;
+  margin: 50px 0 40px;
+}
+
+.CatalogPage{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  gap: 5px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+.pagination .active {
+  background-color: #555;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+

@@ -1,0 +1,83 @@
+.workshops-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.description-block {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.description-block h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description-block p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.workshops-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.workshop-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workshop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.workshop-card h2 {
+  font-size: 24px;
+  color: #2d2d2d;
+  margin-bottom: 15px;
+}
+
+.workshop-card .description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.workshop-card .details {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.workshop-card .details p {
+  margin: 5px 0;
+}
+
+.sign-up-button {
+  background-color: #2d2d2d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.sign-up-button:hover {
+  background-color: #5e5e5e;
+}

@@ -1,0 +1,20 @@
+const express = require("express");
+const Painting = require("../models/Painting");
+
+const router = express.Router();
+
+// Получение информации о картине по ID
+router.get("/:id", async (req, res) => {
+  try {
+    const painting = await Painting.findById(req.params.id);
+    if (!painting) {
+      return res.status(404).json({ message: "Картина не найдена" });
+    }
+    res.json(painting);
+  } catch (error) {
+    console.error("Ошибка при получении картины:", error);
+    res.status(500).json({ message: "Ошибка сервера" });
+  }
+});
+
+module.exports = router;

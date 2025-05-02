@@ -1,0 +1,122 @@
+.registerContainer {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.registerContainer h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+
+.formGroup input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.formGroup input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.formGroup input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.submitButton:hover {
+  background-color: #2d2d2d;
+}
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.submitButton {
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.passwordInput {
+  position: relative;
+  display: flex;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 72%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.togglePassword img {
+  width: 20px;
+  height: 20px;
+}
+
+.password-hints ul {
+  list-style: none;
+  padding-left: 0;
+}
+.password-hints li {
+  padding-left: 1.2em;
+  position: relative;
+  margin-bottom: 4px;
+}
+.password-hints li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+.password-hints .valid::before {
+  color: green;
+}
+.password-hints .invalid::before {
+  color: red;
+}

@@ -1,0 +1,144 @@
+/* Контейнер всей страницы */
+.PaintingPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовок страницы */
+.PaintingPage h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Контейнер для изображения и информации */
+.painting-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Контейнер изображения и галереи */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Основное изображение */
+.main-image {
+  width: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Галерея миниатюр */
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Миниатюры переносятся на новую строку */
+}
+
+/* Миниатюры */
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail.active {
+  border: 2px solid #007bff;
+}
+
+/* Блок с информацией о картине */
+.painting-info {
+  flex: 1;
+  max-width: 500px;
+}
+
+.painting-info .price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.painting-info .description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.painting-info p {
+  margin-bottom: 10px;
+}
+
+/* Кнопка добавления в корзину */
+.add-to-cart {
+  background-color: #555555;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #7b7b7b;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+  .PaintingPage h1 {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+  }
+
+  .painting-container {
+    flex-direction: column; /* Вертикальное расположение блоков */
+    gap: 20px; /* Уменьшаем отступы */
+  }
+
+  .main-image {
+    width: 100%; /* Основное изображение на всю ширину */
+  }
+
+  .gallery {
+    justify-content: center; /* Центрируем миниатюры */
+  }
+
+  .thumbnail {
+    width: 60px; /* Уменьшаем размер миниатюр */
+    height: 60px;
+  }
+
+  .painting-info {
+    max-width: 100%; /* Информация на всю ширину */
+  }
+
+  .painting-info .price {
+    font-size: 20px; /* Уменьшаем размер текста */
+  }
+
+  .painting-info .description {
+    font-size: 14px; /* Уменьшаем размер текста */
+  }
+
+  .add-to-cart {
+    width: 100%; /* Кнопка на всю ширину */
+    padding: 12px 20px; /* Уменьшаем отступы */
+    font-size: 14px; /* Уменьшаем размер текста */
+  }
+}

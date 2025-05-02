@@ -1,0 +1,263 @@
+/* A D M I N */
+
+.admin {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 55vh;
+
+}
+
+.admin h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.admin-w{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-nav{
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.admin-nav a{
+  transition: 0.3s;
+  text-decoration: none;
+  color: #fff;
+  background-color: #444;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+.admin-nav a:hover{
+  background-color: #555;
+}
+
+/* A D D   P A I N T   A N D   M A S T E R K L A S S E S*/
+
+.admin form {
+  background-color: #555;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+  
+}
+
+.admin_form_group{
+  display: flex;
+  flex-direction: column;
+}
+
+.admin_input{
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+.admin button {
+  background-color: #5e5e5e;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  /* margin: 5px; */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  max-width: 520px;
+}
+
+.admin button:hover {
+  background-color: #777;
+}
+
+.admin_h{
+  text-align: center;
+  margin: 50px 0 20px;
+}
+
+.admin textarea {
+  resize: vertical;
+}
+
+.admin input[type="file"] {
+  background-color: transparent;
+}
+
+/* Предпросмотр изображений */
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.image-preview img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* T A B L E S */
+
+/* AdminPaintingsList.css */
+
+.admin_list_cardContainer {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.admin_orders{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 20px;
+}
+
+.admin_list_card {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  /* display: flex; */
+  gap: 50px;
+  /* background-color: #ffffff; */
+}
+
+.admin_list_card:hover {
+  transform: translateY(-5px);
+}
+
+.admin_list_cardTitle {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.admin_masterklass_cardTitle{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.admin_list_text p{
+  color: #ddd;
+}
+
+.admin_list_text strong{
+  color: #fff;
+}
+
+.admin_list_imageContainer {
+  margin-top: 10px;
+}
+
+.admin_list_mainImage {
+  max-width: 300px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.admin_list_additionalImage {
+  width: 45px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.admin_list_buttonContainer {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.admin_list_button {
+  background-color: #5e5e5e;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin_list_button:hover {
+  background-color: #444444;
+}
+
+.admin_list_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.admin_list_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin_list_input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+}
+
+.admin_list_textarea{
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.admin_list_button_one{
+  margin-bottom: 10px;
+}
+
+.admin_list_text{
+  width: 100%;
+}
+
+/* F I L T E R */
+
+.admin_list_filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.admin_filter_input {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.admin_filter_input::placeholder {
+  color: #777777;
+}
+
+.admin_filter_input:focus {
+  border-color: #5e5e5e;
+  outline: none;
+}

@@ -1,0 +1,83 @@
+const express = require("express");
+const router = express.Router();
+const {
+  authMiddleware,
+  artistMiddleware,
+} = require("../middlewares/authMiddleware");
+const multer = require("multer");
+
+// Настройка хранения изображений
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads/");
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "-" + file.originalname);
+  },
+});
+
+const upload = multer({ storage: storage });
+
+// Модель картины
+const Painting = require("../models/Painting");
+
+router.get("/test", (req, res) => {
+    res.json({ message: "Маршрут работает!" });
+  });
+
+// Маршрут для добавления картины
+router.post(
+  "/add-painting",
+  authMiddleware,
+  artistMiddleware,
+//   upload.fields([{ name: "mainImage" }, { name: "additionalImages" }]),
+upload.none() ,
+  async (req, res) => {
+    try {
+      const { title, price, color, description, size, material, orientation } =
+        req.body;
+      const mainImage = req.files["mainImage"]
+        ? req.files["mainImage"][0].path
+        : null;
+      const additionalImages = req.files["additionalImages"]
+        ? req.files["additionalImages"].map((file) => file.path)
+        : [];
+
+      if (!title || !price || !mainImage) {
+        return res
+          .status(400)
+          .json({
+            message: "Название, цена и главное изображение обязательны",
+          });
+      }
+
+      const newPainting = new Painting({
+        title,
+        price,
+        color,
+        description,
+        size,
+        material,
+        orientation,
+        mainImage,
+        additionalImages,
+        artist: req.user._id, // Сохраняем ID художника
+      });
+      console.log("Пользователь:", req.user);
+
+      console.log("Файлы, полученные на сервере:", req.files);
+      console.log("Данные формы:", req.body);
+
+      await newPainting.save();
+      res
+        .status(201)
+        .json({ message: "Картина успешно добавлена", painting: newPainting });
+    } catch (error) {
+      console.error("Ошибка при добавлении картины:", error);
+      res.status(500).json({ message: "Ошибка сервера" });
+    }
+
+  }
+);
+
+module.exports = router;

@@ -1,0 +1,72 @@
+.MasterKlass {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+  
+  .MasterKlass h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #2d2d2d;
+  }
+  
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card-el img {
+    border-radius: 10px;
+    max-width: 425px;
+  }
+  
+  .card-el p {
+    font-size: 16px;
+    color: #757376;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .link_mc_df {
+    display: flex;
+  }
+  
+  .link_mc {
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 12px 40px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .link_mc:hover {
+    background-color: #5e5e5e;
+  }
+  
+  /* Адаптив для мобильных устройств */
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column; /* Карточки вертикально */
+      gap: 20px; /* Отступ между карточками */
+    }
+  
+    .card-el img {
+      max-width: 100%; /* Изображение на всю ширину */
+    }
+  
+    .MasterKlass h2 {
+      font-size: 28px; /* Уменьшаем размер заголовка */
+    }
+  
+    .link_mc {
+      padding: 10px 30px; /* Уменьшаем размер кнопки */
+    }
+  }

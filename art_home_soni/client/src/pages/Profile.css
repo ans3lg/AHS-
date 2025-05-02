@@ -1,0 +1,184 @@
+.profile-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.notification {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 5px;
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.profile-card,
+.password-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-card h2,
+.password-card h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  font-size: 18px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.profile-info button {
+  display: block;
+  margin: 20px auto 0;
+  background: #555555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-info button:hover {
+  background: #7b7b7b;
+}
+
+.profile-form label,
+.password-form label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile-form input,
+.password-form input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  background: #555555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-buttons button:hover {
+  background: #7b7b7b;
+}
+
+.password-form button {
+  display: block;
+  width: 100%;
+  background: #555555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.password-form button:hover {
+  background: #7b7b7b;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.order-card {
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.order-status {
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.order-status.pending { background: orange; color: white; }
+.order-status.completed { background: green; color: white; }
+.order-status.canceled { background: red; color: white; }
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.order-item-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.bookings-link {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 10px 20px;
+  background-color: #555555;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.bookings-link:hover {
+  background-color: #7b7b7b;
+}

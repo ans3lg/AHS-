@@ -1,0 +1,51 @@
+.orders-table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: top;
+}
+
+.orders-table th {
+  background-color: #555555;
+  text-align: left;
+}
+
+.orders-table td ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.search-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 15%;
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.orders-table th {
+  cursor: pointer;
+  user-select: none;
+}
+
+.orders-table th:hover {
+  background-color: #333333;
+}
